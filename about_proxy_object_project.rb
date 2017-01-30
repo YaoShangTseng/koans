@@ -16,23 +16,32 @@ class Proxy
   def initialize(target_object)
     @object = target_object
     # ADD MORE CODE HERE
+    @manipulation = []
   end
 
   # WRITE CODE HERE
   def channel= ch
+    @manipulation << __method__
     @object.channel = ch
   end
 
   def channel
+    @manipulation << __method__
     @object.channel
   end
 
   def power
+    @manipulation << __method__
     @object.power
   end
 
   def on?
+    @manipulation << __method__
     @object.on?
+  end
+
+  def messages
+    @manipulation
   end
 
 end
