@@ -48,6 +48,10 @@ class Proxy
     super(method_name, *args, &block)
   end
 
+  def called?(func)
+    @manipulation.include?(func)
+  end
+
 end
 
 # The proxy object should pass the following Koan:
