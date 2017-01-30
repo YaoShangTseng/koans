@@ -60,6 +60,16 @@ class Proxy
     sum
   end
 
+  def upcase!
+    @manipulation << __method__
+    @object.upcase!
+  end
+
+  def split
+    @manipulation << __method__
+    @object.split
+  end
+
 end
 
 # The proxy object should pass the following Koan:
