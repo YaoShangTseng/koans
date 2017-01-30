@@ -52,6 +52,14 @@ class Proxy
     @manipulation.include?(func)
   end
 
+  def number_of_times_called(func)
+    sum = 0
+    @manipulation.each do |item|
+      sum += 1 if func == item
+    end
+    sum
+  end
+
 end
 
 # The proxy object should pass the following Koan:
