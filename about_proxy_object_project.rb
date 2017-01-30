@@ -19,6 +19,22 @@ class Proxy
   end
 
   # WRITE CODE HERE
+  def channel= ch
+    @object.channel = ch
+  end
+
+  def channel
+    @object.channel
+  end
+
+  def power
+    @object.power
+  end
+
+  def on?
+    @object.on?
+  end
+
 end
 
 # The proxy object should pass the following Koan:
