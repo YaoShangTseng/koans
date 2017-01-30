@@ -44,6 +44,10 @@ class Proxy
     @manipulation
   end
 
+  def method_missing(method_name, *args, &block)
+    super(method_name, *args, &block)
+  end
+
 end
 
 # The proxy object should pass the following Koan:
